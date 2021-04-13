@@ -31,41 +31,65 @@ document.addEventListener('DOMContentLoaded', async function() {
 
   // PART 1
   // Figure out how products there are, and store that number in memory
+  let numProduct = data.products.length
+  console.log(`${numProduct}`)
 
   // Figure out how promotions there are, and store that number in memory
-
+  let numPromotions = data.promotions.length
   // Write the number of products to the JavaScript console
-
+  console.log(`${numProduct}`)
   // Write the number of promotions to the JavaScript console
-
+  console.log(`${numPromotions}`)
+  
   // PART 2
   // Store the first product in memory
-
+  let product1 = data.products[0]
   // Write the first product to the JavaScript console, on three separate lines
-
+  console.log(product1)
   // Repeat for the 2nd and 3rd products
   // Store the second product in memory
-
+  let product2 = data.products[1]
   // Write the product to the JavaScript console, on three separate lines
-  
+  console.log(product2)
   // Store the third product in memory
-
+  let product3 = data.products[2]
   // Write the product to the JavaScript console, on three separate lines
-
+  console.log(product3)
+  
   // PART 3
   // Get a random integer between 1 and 10
-
   // Subtract one from that random integer because Arrays are zero-based
-
+  let randNum = getRandomInt (10) -1 
+  
   // Use the random integer to grab a promotion from the Array of promotions
   // and store it in memory
+  let promo = data.promotions[randNum]
 
   // Figure out which emoji should be displayed, store it in memory
+  // if (promo.type == `Discount`){
+  //   console.log(`🤑: ${promo.description}`)
+  // } else if (promo.type == `Shipping`){
+  //   console.log(`🚛: ${promo.description}`)
+  // } else {
+  //   console.log(`🏆: ${promo.description}`)
+  // }
+
+  let emojiNew
+
+  let emojilist = [`🤑`, `🚛`, `🏆`]
+  if (promo.type == `Discount`){
+    emojiNew=emojilist[0]
+  } else if (promo.type == `Shipping`){
+    emojiNew=emojilist[1]
+  } else {
+    emojiNew=emojilist[2]
+  }
 
   // Create a sentence that displays the emoji along with the description 
   // of the promotion
 
   // Write the sentence to the JavaScript console
+  console.log(`${emojiNew}:${promo.description}`)
 
   // 🔥 YOUR CODE ENDS HERE 🔥
 })
