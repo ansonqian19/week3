@@ -66,20 +66,20 @@ document.addEventListener('DOMContentLoaded', async function() {
   let promo = data.promotions[randNum]
 
   // Figure out which emoji should be displayed, store it in memory
-  // if (promo.type == `Discount`){
-  //   console.log(`🤑: ${promo.description}`)
-  // } else if (promo.type == `Shipping`){
-  //   console.log(`🚛: ${promo.description}`)
-  // } else {
-  //   console.log(`🏆: ${promo.description}`)
-  // }
+  if (promo.type == `discount`){
+    console.log(`🤑: ${promo.description}`)
+  } else if (promo.type == `shipping`){
+    console.log(`🚛: ${promo.description}`)
+  } else {
+    console.log(`🏆: ${promo.description}`)
+  }
 
   let emojiNew
 
   let emojilist = [`🤑`, `🚛`, `🏆`]
-  if (promo.type == `Discount`){
+  if (promo.type == `discount`){
     emojiNew=emojilist[0]
-  } else if (promo.type == `Shipping`){
+  } else if (promo.type == `shipping`){
     emojiNew=emojilist[1]
   } else {
     emojiNew=emojilist[2]
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', async function() {
   // of the promotion
 
   // Write the sentence to the JavaScript console
-  console.log(`${emojiNew}:${promo.description}`)
+  console.log(`${promo.type}-${emojiNew}:${promo.description}`)
 
   // 🔥 YOUR CODE ENDS HERE 🔥
 })
