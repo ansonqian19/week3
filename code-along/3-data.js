@@ -8,10 +8,21 @@
 // Write the recipe (algorithm) in the comments. Then, write the code.
 
 // Store a simple social media profile in memory
+let profile = {
+    name: `Brian`,
+    location: {
+        city:`Chicago`,
+        state:`Illinois`
+    },
+    timeline: [`Teaching`, `Eating`,`Riding`]
+}
 
 // Retrieve the name from the profile, store it in memory
+let profileName = profile.name
 
 // Display the name in the console
+let profileLocation = profile.location
+console.log(`Location: ${profileLocation.city}, ${profileLocation.state}`)
 
 // Retrieve the location, store it in a memory
 
@@ -19,3 +30,7 @@
 // format, to the JavaScript console
 
 // Write the 3 statuses from the "timeline" to the JavaScript console
+console.log(`Timeline:`)
+console.log(profile.timeline[0])
+console.log(profile.timeline[1])
+console.log(profile.timeline[2])
